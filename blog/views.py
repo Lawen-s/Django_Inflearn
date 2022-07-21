@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import Post1
+from .models import Post
 
 def post_list(request):
-    qs = Post1.objects.all()
+    qs = Post.objects.all()
     return render(request, 'blog/post_list.html',{
         'post_list' : qs,
     })
